@@ -4,10 +4,12 @@ sample_hash = {
    :class => { 
       :student => { 
          :name => "Mike",
-         "marks" => { 
-            "physics" => 70,
-            "history" => 80
+         :marks => { 
+            :physics => 70,
+            :history => 80
          }
       }
    }
 }
+
+p sample_hash.fetch(:class).fetch(:student).fetch(:marks).fetch(:history)
